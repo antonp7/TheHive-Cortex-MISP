@@ -7,9 +7,9 @@ TheHive se encuentra estrechamente relacionado con la herramienta de código lib
 
 Por otro lado, la herramienta de código libre **MISP** permite crear eventos que permite exportarlos a TheHive. Asimismo, desde TheHive también podemos exportar aquellos casos que se hayan creado a MISP.
 
-![explicacion-thehive](https://user-images.githubusercontent.com/45532292/236184714-9770ee6c-1ed7-4b42-817b-5a078839d3d2.png)
+![explicacion-thehive](https://user-images.githubusercontent.com/45532292/236187760-26965725-eee1-4beb-b9d5-801f6d3175e8.png)
 
-Se instalarán estas tres herramientas usando un docker-compose.
+Se instalarán estas tres herramientas usando un docker-compose por lo que para ello, se necesitará tener instalar anteriormente Docker en el propio equipo.
 
 ## Requisitos Hardware
 Para la instalación de todas estas herramientas se necesitan como mínimo los siguientes requisitos hardware:
@@ -27,3 +27,10 @@ La instalación de los contenedores se realizará mediante un docker-compose.yml
 - MySQL database
 
 Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores.
+
+## Instalación de los contenedores
+Para poder definir los contenedores que usaremos, tendremos que usar el siguiente comando:
+```console
+ docker-compose --env-file .env up -d
+```
+Con el comando anterior estaremos indicando el archivo de environment con la opción ```console --env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```console -d```
