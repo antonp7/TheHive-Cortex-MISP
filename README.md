@@ -18,7 +18,7 @@ Para la instalación de todas estas herramientas se necesitan como mínimo los s
 - 4 vCPU
 
 ## Contenedores a instalar
-La instalación de los contenedores se realizará mediante un docker-compose.yml que se ha definido en este repositorio. En dicho archivo, se encuentran todos los dos contenedores que se van a instalar. Concretamente son los siguientes:
+La instalación de los contenedores se realizará mediante docker compose, en un archivo que se ha denominado como ```docker-compose.yml``` en este repositorio. En dicho archivo, se encuentran todos los contenedores que se van a instalar. Concretamente son los siguientes:
 - TheHive
 - Cortex
 - MISP
@@ -29,8 +29,8 @@ La instalación de los contenedores se realizará mediante un docker-compose.yml
 Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores.
 
 ## Instalación de los contenedores
-Para poder definir los contenedores que usaremos, tendremos que usar el siguiente comando:
+Para poder definir los contenedores que usaremos, tendremos que ejecutar el siguiente comando en la misma carpeta donde está situado el archivo docker-compose.yml:
 ```console
  docker-compose --env-file .env up -d
 ```
-Con el comando anterior estaremos indicando el archivo de environment con la opción ```console --env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```console -d```
+Con el comando anterior estaremos indicando el archivo de environment con la opción ```--env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```-d```
