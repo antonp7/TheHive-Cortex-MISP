@@ -34,3 +34,14 @@ Para poder definir los contenedores que usaremos, tendremos que ejecutar el sigu
  docker-compose --env-file .env up -d
 ```
 Con el comando anterior estaremos indicando el archivo de environment con la opción ```--env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```-d```
+
+Para comprobar que todos los contenedores se definieron correctamnete y están ejecutandose sin fallos, se puede usar el siguiente commando:
+```console
+ docker ps -a
+```
+Para poder acceder a las distintas aplicaciones se tienen que abrir desde el navegador y se accede usando las siguientes URL:
+- TheHive: [a link](http://localhost:9000)
+- TheHive: [a link](http://localhost:9001)
+- TheHive: [a link](http://localhost:9500)
+
+Los puertos a los que se accede a las plataformas son las indicadas anteriormente dado que así se encuentran definidas en el ```docker-compose.yml```. Si se quisieran cambiar los puertos por los que se acceden, tan sólo habría que cambiarlos en el propio archivo.
