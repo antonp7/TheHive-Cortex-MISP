@@ -40,8 +40,19 @@ Para comprobar que todos los contenedores se definieron correctamnete y están e
  docker ps -a
 ```
 Para poder acceder a las distintas aplicaciones se tienen que abrir desde el navegador y se accede usando las siguientes URL:
-- TheHive: [a link](http://localhost:9000)
-- TheHive: [a link](http://localhost:9001)
-- TheHive: [a link](http://localhost:9500)
+- TheHive: [http://localhost:9000](http://localhost:9000)
+- TheHive: [http://localhost:9001](http://localhost:9001)
+- TheHive: [http://localhost:9500](http://localhost:9500)
 
 Los puertos a los que se accede a las plataformas son las indicadas anteriormente dado que así se encuentran definidas en el ```docker-compose.yml```. Si se quisieran cambiar los puertos por los que se acceden, tan sólo habría que cambiarlos en el propio archivo.
+
+## Primera ejecución
+La primera vez que ejecutamos cada una de las aplicaciones, éstas deberemos de configurar una serie de parámetros.
+
+En el caso de TheHive, nos pedirá que establezcamos una 
+
+## Integración Cortex con TheHive
+
+## Integración MISP con TheHive
+
+## Webhooks en TheHive
