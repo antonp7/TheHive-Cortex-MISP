@@ -41,15 +41,37 @@ Para comprobar que todos los contenedores se definieron correctamnete y están e
 ```
 Para poder acceder a las distintas aplicaciones se tienen que abrir desde el navegador y se accede usando las siguientes URL:
 - TheHive: [http://localhost:9000](http://localhost:9000)
-- TheHive: [http://localhost:9001](http://localhost:9001)
-- TheHive: [http://localhost:9500](http://localhost:9500)
+- Cortex: [http://localhost:9001](http://localhost:9001)
+- MISP: [http://localhost:9500](http://localhost:9500)
 
 Los puertos a los que se accede a las plataformas son las indicadas anteriormente dado que así se encuentran definidas en el ```docker-compose.yml```. Si se quisieran cambiar los puertos por los que se acceden, tan sólo habría que cambiarlos en el propio archivo.
 
 ## Primera ejecución
 La primera vez que ejecutamos cada una de las aplicaciones, éstas deberemos de configurar una serie de parámetros.
 
-En el caso de TheHive, nos pedirá que establezcamos una 
+En el caso de TheHive, nos pedirá que introduzcamos nuestras credenciales. 
+![image](https://user-images.githubusercontent.com/45532292/236207112-00843d1e-69a1-4efb-886e-cf77420d1159.png)
+Para la primer ejecuación usaremos las siguientes credenciales:
+- login: ```admin@thehive.local```
+- password: ```secret```
+
+Una vez dentro, podremos poner añadir una nueva organización clicando en el botón de ```New Organisation``` situado en la parte superior de la pantalla. 
+![image](https://user-images.githubusercontent.com/45532292/236208807-cf8b0bd0-9371-4c7f-a173-0f6d5d615b78.png)
+
+Si queremos añadir un usuario a una organización, tan sólo hay que entrar en la organización donde queremos añadir el usuario y clicar en el botón ```Create new user```. Aparecerá una pantalla donde podremos indicar los datos del usuario que se quieran y los permisos que tendrá dentro de la Organización (Adminsitrador, Analista o Solo lectura):
+![image](https://user-images.githubusercontent.com/45532292/236209465-27a0b70a-d600-4e79-8a7e-237ac4e2c196.png)
+Cuando se vuelva a loguear con una cuenta de un usuario que ha sido creado, se podrá acceder a las distintas funciones de la aplicación, entre las que se incluye la creación de un nuevo caso, ver las tareas pendientes, consultar las alertas o ver un dashborard de todo lo que está sucendiendo en ese momento, como se puede ver en la siguiente imagen:
+![image](https://user-images.githubusercontent.com/45532292/236211850-c711fc9d-c0ae-4d09-8f5f-de879441e1ca.png)
+
+
+
+Para el caso de Cortex, se nos pedirá actualizar la base de datos. 
+![image](https://user-images.githubusercontent.com/45532292/236207548-19bf4a35-5c82-4d46-91e7-a9b9c88a9c8e.png)
+
+Tan sólo tenemos que clicar en el botón de ```Update Database``` para acceder a la ventana donde podremos poner las credenciales que queramos para el caso del usuario con permisos de adminstrador.
+![image](https://user-images.githubusercontent.com/45532292/236208046-7d1d1d87-fcc2-4cd5-9ae3-9cc4872d742e.png)
+
+
 
 ## Integración Cortex con TheHive
 
