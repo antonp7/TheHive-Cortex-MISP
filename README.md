@@ -212,9 +212,15 @@ En la zona inferior, dentro de la sección de ```Auth keys```, crearemos una key
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236436758-8e053a75-d44a-4656-9376-e50f085dcd31.png"> </p>
  
-Una vez dentro, se nos mostrará en pantalla al Auth Key creada para ese usuario.
+Una vez dentro, se nos mostrará en pantalla al Auth Key creada para ese usuario:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236440893-c95526b3-c79c-448f-9253-da13321e6348.png"> </p>
 
 IMPORTANTE: Se necesita apuntar esa Auth Key en algún lado antes de cerrar dicha pestaña, ya que de contrario no podremos consultar de nuevo toda la Auth Key más adelante.
+
+Una vez, apuntada dicha clave, tendremos que ir al archivo de ```application.conf```, situado dentro de la carpeta de ```thehive``` de este repositorio. Dentro de ese archivo pondremos la clave, en la línea donde se indica ```key=``` dentro de la sección de ```auth```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236443652-a37472d9-fd95-41b6-a430-d8d5b9f2c6e2.png"> </p>
 
 
 
