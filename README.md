@@ -240,6 +240,59 @@ También se puede comprobar, como en el caso de Cortex, mediante los iconos situ
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236456758-2d39797b-c064-40a6-86c0-6754c4d92b5d.png"> </p>
 
+De esta forma, si integramos MISP con TheHive, desde TheHive se puede enviar casos que se han creado a MISP, clicando en el botón de ```Export``` situado en la parte superior cuando entramos en un caso para ver la información:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236457707-5ee98fae-4369-45e4-b80f-da4e91330c2d.png"> </p>
+
+Y así podremos exportar el caso a MISP pulsando en el botón de ```Export``` que se aparecerá en la pantalla:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236457953-0505c706-c884-4cb9-9456-4777dc1d5264.png"> </p>
+
+Al hacer esto, aparecerá en MISP el caso que se ha exportado en la sección de ```List Events```:
+
+![image](https://user-images.githubusercontent.com/45532292/236458180-64199ca2-b2d6-482c-9a3e-0ecd3b52e07c.png)
+
+Para pasar un evento de MISP a TheHive, crearemos un evento en MISP, entrando en la seccióin de ```Add Event``` dentro de la opción de ```Event Actions``` del menú superior de la aplicación:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236458634-6d257331-3b05-4199-8593-96ca70de1373.png"> </p>
+
+Y le daremos a ```Submit``` para crear el evento:
+
+![image](https://user-images.githubusercontent.com/45532292/236458465-573f40e1-5fb7-46fb-a225-33f8d5554de7.png)
+
+Se nos mostrará en pantalla la información del nuevo Evento. Será necesario crear un atributo, mediante el símbolo de ```+``` que aparece situado en la zona inferior de la página:
+
+![image](https://user-images.githubusercontent.com/45532292/236458997-a67ad83b-7ba7-46d6-bb9f-079ec06f0cc7.png)
+
+Y será necesario pubicar el evento, pulsando en la opción de ```Publish Event``` en la barra de opciones situada a la izquierda:
+
+![image](https://user-images.githubusercontent.com/45532292/236460577-67a7f957-5ee7-4f1b-8754-943ed7f1e4d5.png)
 
 
 ## Webhooks en TheHive
+
+TheHive tiene una opción para poder notificar de todos los eventos que se produzcan y enviarlos a un enlace de Webhook. Para ello es necesario modificar el archivo de ```application.conf```, situado dentro de la carpeta de ```thehive``` de este repositorio. Para ello, será necesario indicar estas líneas en dicho archivo:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236461187-dfaa1320-77e7-4b4b-b5d1-c8ab1ce2a96b.png"> </p>
+
+Con ```name: ``` se indicará el nombre del Webhook que se quiera especificar y con la línea ```url:``` se indicará la URL del enlace de Webhook en el que se quiere enviar las notificaciones de todos los eventos que pasa en TheHive.
+
+Para poder activar el Webhook, será necesario indicar las siguientes líneas en la terminal del ordenador:
+```console
+read -p 'Enter the URL of TheHive: ' thehive_url
+read -p 'Enter your login: ' thehive_user
+read -s -p 'Enter your password: ' thehive_password
+
+curl -XPUT -u$thehive_user:$thehive_password -H 'Content-type: application/json' $thehive_url/api/config/organisation/notification -d '
+{
+  "value": [
+    {
+      "delegate": false,
+      "trigger": { "name": "AnyEvent"},
+      "notifier": { "name": "nombrewebhook", "endpoint": "local" }
+    }
+  ]
+}'
+```
+Se puede modificar que eventos se quiere notificar en la línea de ```trigger```. Para este caso, se notificará todos los eventos dado que está indicado con la opción de ```AnyEvent```.
+
