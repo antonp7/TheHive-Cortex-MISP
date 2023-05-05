@@ -160,7 +160,7 @@ Para integrarlo por completo con TheHive, será necesario construir de nuevo la 
 ```console
  docker-compose --env-file .env up -d
 ```
-Podremos comprobar que la integración se ha realizado satsfactoriamente clicando en el botón ```About``` situado en el menú donde se encuentra el nombre del usuario:
+Podremos comprobar que la integración se ha realizado satsfactoriamente, accediendo a TheHive y clicando en el botón ```About``` situado en el menú donde se encuentra el nombre del usuario:
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236426553-3d937352-308d-499b-b4c3-a4dca2e76d3a.png"> </p>
 
@@ -172,6 +172,33 @@ También se puede consultar que dicha integración está correctamente configura
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236427053-8593e2a9-2fdc-4690-821b-5ca0fd274084.png"> </p>
 
+La integración de Cortex con TheHive nos permite añadir Responders y Analizadores a TheHive. Para el caso de los Analizadores, deberemos de tener configurado al menos un Analizador en Cortex. Para usarlo, creamos un Observable primero en el caso donde se indique mediante el botón de ```Add observable```:
+![image](https://user-images.githubusercontent.com/45532292/236430354-cb7103d8-da8c-4061-95d8-bd487c32bbc0.png)
+
+Seleccionamos ese observable creado y pulsamos sobre la opción de ```Run analyzers```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236431135-dda4fe22-43b4-471d-ab58-f0053b7be5eb.png"> </p>
+
+Se abrirá una ventana para seleccionar el Analizador que queremos usar. Y pulsamos en ```Run selected analyzers```:
+![image](https://user-images.githubusercontent.com/45532292/236431308-eaa981a8-2754-4ee0-8619-c73d45d1a824.png)
+
+Podremos comprobar que ha funcionado correctamente desde la pestaña que aparece a la derecha, si el status se encuentra en modo ```Success```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236431534-dd63ae08-0d74-46fb-a060-2f9d4c869049.png"> </p>
+
+En Cortex, aparecerá el Observable con el resultado que se ha obtenido en la pestaña de ```Jobs History```. Se podrá comprobar más información de este Observable analizado pulsando sobre el botón de ```View```:
+
+![image](https://user-images.githubusercontent.com/45532292/236432235-b5d211dc-2ca0-4a8f-92b6-a0bb1407db38.png)
+
+Para el caso de los Responders, se puede usar dicha herramienta, de una forma similar que la de los Analizadores. Deberemos de crear primero un Observable, si no se ha creado uno anteriormente, seleccionar dicho Observable y pulsar sobre el botón de ```Responders```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236433113-02a315f5-0c7c-471d-abf0-de3928605dc3.png"> </p>
+
+Podremos seleccionar el Responder que queremos ejecutar, y si se realiza dicha acción, aparecerá el resultado de la ejecución del mismo de la misma manera que los Analizadores, dentro de la sección de ```Jobs History``` en Cortex
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236433500-846bc6d7-7108-439b-a390-831006568612.png"> </p>
+
+Podemos ver en más detalle 
 ## Integración MISP con TheHive
 
 ## Webhooks en TheHive
