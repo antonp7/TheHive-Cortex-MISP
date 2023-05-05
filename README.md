@@ -194,11 +194,28 @@ Para el caso de los Responders, se puede usar dicha herramienta, de una forma si
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236433113-02a315f5-0c7c-471d-abf0-de3928605dc3.png"> </p>
 
-Podremos seleccionar el Responder que queremos ejecutar, y si se realiza dicha acción, aparecerá el resultado de la ejecución del mismo de la misma manera que los Analizadores, dentro de la sección de ```Jobs History``` en Cortex
+Podremos seleccionar el Responder que queremos ejecutar, y si se realiza dicha acción, aparecerá el resultado de la ejecución del mismo de la misma manera que los Analizadores, dentro de la sección de ```Jobs History``` en Cortex.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236433500-846bc6d7-7108-439b-a390-831006568612.png"> </p>
 
-Podemos ver en más detalle 
 ## Integración MISP con TheHive
+
+Para la integración de MISP con TheHive, deberemos de tener al menos un usuario creado en MISP. Accederemos a los distintos usuarios que tenemos definidos en la sección de ```List Users``` al desplegar la pestaña de ```Administration```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236435555-36b4de80-7a42-405d-bb25-75a0f222d8b1.png"> </p>
+
+Y entramos en la información del usuario pulsando sobre el icono del ojo situado a la derecha de la fila del usuario:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236436397-0ed17675-d521-42a0-b4ad-066310f0bdd8.png"> </p>
+
+En la zona inferior, dentro de la sección de ```Auth keys```, crearemos una key pulsando sobre el botón de ```Add authentification key```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236436758-8e053a75-d44a-4656-9376-e50f085dcd31.png"> </p>
+ 
+Una vez dentro, se nos mostrará en pantalla al Auth Key creada para ese usuario.
+
+IMPORTANTE: Se necesita apuntar esa Auth Key en algún lado antes de cerrar dicha pestaña, ya que de contrario no podremos consultar de nuevo toda la Auth Key más adelante.
+
+
 
 ## Webhooks en TheHive
