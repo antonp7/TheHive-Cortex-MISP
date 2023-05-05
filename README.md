@@ -49,6 +49,7 @@ Los puertos a los que se accede a las plataformas son las indicadas anteriorment
 ## Primera ejecución
 La primera vez que ejecutamos cada una de las aplicaciones, éstas deberemos de configurar una serie de parámetros.
 
+### TheHive
 En el caso de TheHive, nos pedirá que introduzcamos nuestras credenciales. 
 ![image](https://user-images.githubusercontent.com/45532292/236207112-00843d1e-69a1-4efb-886e-cf77420d1159.png)
 Para la primer ejecuación usaremos las siguientes credenciales:
@@ -60,18 +61,36 @@ Una vez dentro, podremos poner añadir una nueva organización clicando en el bo
 
 Si queremos añadir un usuario a una organización, tan sólo hay que entrar en la organización donde queremos añadir el usuario y clicar en el botón ```Create new user```. Aparecerá una pantalla donde podremos indicar los datos del usuario que se quieran y los permisos que tendrá dentro de la Organización (Adminsitrador, Analista o Solo lectura):
 ![image](https://user-images.githubusercontent.com/45532292/236209465-27a0b70a-d600-4e79-8a7e-237ac4e2c196.png)
+
 Cuando se vuelva a loguear con una cuenta de un usuario que ha sido creado, se podrá acceder a las distintas funciones de la aplicación, entre las que se incluye la creación de un nuevo caso, ver las tareas pendientes, consultar las alertas o ver un dashborard de todo lo que está sucendiendo en ese momento, como se puede ver en la siguiente imagen:
 ![image](https://user-images.githubusercontent.com/45532292/236211850-c711fc9d-c0ae-4d09-8f5f-de879441e1ca.png)
 
-
+### Cortex
 
 Para el caso de Cortex, se nos pedirá actualizar la base de datos. 
 ![image](https://user-images.githubusercontent.com/45532292/236207548-19bf4a35-5c82-4d46-91e7-a9b9c88a9c8e.png)
 
-Tan sólo tenemos que clicar en el botón de ```Update Database``` para acceder a la ventana donde podremos poner las credenciales que queramos para el caso del usuario con permisos de adminstrador.
+Tan sólo tendremos que clicar en el botón de ```Update Database``` para acceder a la ventana donde podremos poner las credenciales que queramos para el caso del usuario con permisos de administrador.
 ![image](https://user-images.githubusercontent.com/45532292/236208046-7d1d1d87-fcc2-4cd5-9ae3-9cc4872d742e.png)
 
+Si intentamos entrar a la aplicación con esas credenciales nuevas credas, se nos abrirá la pantalla de inicio donde podremos añadir nuevas organizaciones clicando en el botón que se encuentra en la zona superior izquierda ```Add Organization```:
+![image](https://user-images.githubusercontent.com/45532292/236399386-3b405ab5-08a8-48cc-85c5-1d0a0b7cd351.png)
 
+Y añadir usuarios en la organización creada, de la misma forma que en TheHive, pulsando en el botón ```Add user``` donde se puede indicar también los permisos de dicho usuario:
+![image](https://user-images.githubusercontent.com/45532292/236399620-4acd6bbf-ce09-4ab2-8b99-13bcd2e1103b.png)
+
+Con los nuevos usuarios creados, si intentamos acceder a la plataforma con sus credenciales, nos aparecerá una pantalla donde podremos ver un historial de lo que está sucendiendo en todo momento en Cortex y añadir Analizadores o Responders:
+![image](https://user-images.githubusercontent.com/45532292/236400291-8dc461cd-9ab3-44da-a45a-f74da2104888.png)
+
+
+Para añadir Analizadores o Responders, es necesario acceder a la pestaña de ```Organization``` situada en la parte superior derecha. Dentro de dicha pestaña se puede seleccionar el analizador (dentro de la sección de ```Analyzers```) o un Responder (en la sección de ```Responders```) que se quiera usar pulsando en el botón de ```Enable```, situado en la zona derecha de cada uno ed los Analizadores/Responders:
+![image](https://user-images.githubusercontent.com/45532292/236400894-208c3f43-03db-4804-992f-343f22640d11.png)
+
+Dentro de cada uno podremos indicar los distintos parámetros para configurarlo como se quiera:
+![image](https://user-images.githubusercontent.com/45532292/236401064-b46d4600-be85-42c6-84df-69be0f4e2ad1.png)
+
+
+### MISP
 
 ## Integración Cortex con TheHive
 
