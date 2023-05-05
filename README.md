@@ -222,6 +222,24 @@ Una vez, apuntada dicha clave, tendremos que ir al archivo de ```application.con
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236443652-a37472d9-fd95-41b6-a430-d8d5b9f2c6e2.png"> </p>
 
+Para poder realizar la integración con TheHive, se necesitará parar el contedor de TheHive. Esto se puede hacer con el siguiente comando:
+
+```console
+docker-compose stop
+```
+Y se ejecutará de nuevo los contenedores con el comando
+
+```console
+ docker-compose --env-file .env up -d
+```
+Asi, una vez que accedamos a TheHive, podemos comprobar en la sección de ```About```, que la conexión con MISP se encuentra en estado ```OK```:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236456563-4d98e40e-e64f-4c90-a506-1d165929c02d.png"> </p>
+
+También se puede comprobar, como en el caso de Cortex, mediante los iconos situados en la zona inferior derecha. Si se encuentra el icono en verde, la conexión está establecida correctamente:
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236456758-2d39797b-c064-40a6-86c0-6754c4d92b5d.png"> </p>
+
 
 
 ## Webhooks en TheHive
