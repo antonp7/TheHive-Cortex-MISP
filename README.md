@@ -53,7 +53,7 @@ Para poder definir los contenedores que usaremos, tendremos que ejecutar el sigu
 ```console
  docker-compose --env-file .env up -d
 ```
-Con el comando anterior estaremos indicando el archivo de environment con la opción ```--env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```-d```
+Con el comando anterior estaremos indicando el archivo con unas variables de entorno con la opción ```--env-file``` y ejecutando cada uno de los contenedores en segundo plano con la opción ```-d```
 
 Para comprobar que todos los contenedores se definieron correctamnete y están ejecutandose sin fallos, se puede usar el siguiente commando:
 ```console
