@@ -289,9 +289,14 @@ Con ```name: ``` se indicará el nombre del Webhook que se quiera especificar y 
 Para poder activar el Webhook, será necesario indicar las siguientes líneas en la terminal del ordenador:
 ```console
 read -p 'Enter the URL of TheHive: ' thehive_url
+```
+```console
 read -p 'Enter your login: ' thehive_user
+```
+```console
 read -s -p 'Enter your password: ' thehive_password
-
+```
+```console
 curl -XPUT -u$thehive_user:$thehive_password -H 'Content-type: application/json' $thehive_url/api/config/organisation/notification -d '
 {
   "value": [
