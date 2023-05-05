@@ -31,11 +31,13 @@ Por otro lado, la herramienta de código libre **MISP** permite crear eventos qu
 
 Se instalarán estas tres herramientas usando un docker-compose por lo que para ello, se necesitará tener instalar anteriormente Docker en el propio equipo.
 
+
 ## Requisitos Hardware
 Para la instalación de todas estas herramientas se necesitan como mínimo los siguientes requisitos hardware:
 - 10GB de RAM
 - 50GB de almacenamiento interno
 - 4 vCPU
+
 
 ## Contenedores a instalar
 La instalación de los contenedores se realizará mediante docker compose, en un archivo que se ha denominado como ```docker-compose.yml``` en este repositorio. En dicho archivo, se encuentran todos los contenedores que se van a instalar. Concretamente son los siguientes:
@@ -47,6 +49,8 @@ La instalación de los contenedores se realizará mediante docker compose, en un
 - MySQL database
 
 Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores.
+
+
 
 ## Instalación de los contenedores
 Antes de poder realizar la instalación de los contenedores, deberemos de crear un fichero que contiene unas variables de entorno con el nombre de ```.env``` en el mismo directorio donde se encontrará el archivo de ```docker-compose.yml```. En el siguiente archivo se escribirá las siguientes líneas:
@@ -71,6 +75,7 @@ Para poder acceder a las distintas aplicaciones se tienen que abrir desde el nav
 - MISP: [http://localhost:9500](http://localhost:9500)
 
 Los puertos a los que se accede a las plataformas son las indicadas anteriormente dado que así se encuentran definidas en el ```docker-compose.yml```. Si se quisieran cambiar los puertos por los que se acceden, tan sólo habría que cambiarlos en el propio archivo.
+
 
 ## Primera ejecución
 La primera vez que ejecutamos cada una de las aplicaciones, éstas deberemos de configurar una serie de parámetros.
@@ -138,6 +143,8 @@ Y podremos añadir un nuevo usuario a dicha organización que se ha creado desde
 
 Dentro de esta sección podremos indicar los distintos datos del usuarios que se quiere añadir, como a la organización a la que se quiere añadir o los permnisos que tiene.
 
+
+
 ## Integración Cortex con TheHive
 Para la integración de Cortex con TheHive, es necesario la realización de una API Key de un usuario en Cortex. Para ello, desde la aplicación de Cortex, usando la cuenta de Admin, se necesitará acceder a la sección de Users y pulsar en el botón de ```Create API Key``` del usuario que se quiere integrar con TheHive
 
@@ -197,6 +204,8 @@ Para el caso de los Responders, se puede usar dicha herramienta, de una forma si
 Podremos seleccionar el Responder que queremos ejecutar, y si se realiza dicha acción, aparecerá el resultado de la ejecución del mismo de la misma manera que los Analizadores, dentro de la sección de ```Jobs History``` en Cortex.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236433500-846bc6d7-7108-439b-a390-831006568612.png"> </p>
+
+
 
 ## Integración MISP con TheHive
 
