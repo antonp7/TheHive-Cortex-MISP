@@ -3,21 +3,21 @@ Instalación de las plataformas TheHive, Cortex y MISP.
 
 ## Índice
 
-* [Introducción](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#introducci%C3%B3n)
+* [Introducción](https://github.com/antonperezv/TheHive-Cortex-MISP#introducci%C3%B3n)
 
-* [Requisitos Hardware](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#requisitos-hardware)
+* [Requisitos Hardware](https://github.com/antonperezv/TheHive-Cortex-MISP#requisitos-hardware)
 
-* [Contenedores a instalar](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#contenedores-a-instalar)
+* [Contenedores a instalar](https://github.com/antonperezv/TheHive-Cortex-MISP#contenedores-a-instalar)
 
-* [Instalación de los contenedores](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#instalaci%C3%B3n-de-los-contenedores)
+* [Instalación de los contenedores](https://github.com/antonperezv/TheHive-Cortex-MISP#instalaci%C3%B3n-de-los-contenedores)
 
-* [Primera ejecución](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#primera-ejecuci%C3%B3n)
+* [Primera ejecución](https://github.com/antonperezv/TheHive-Cortex-MISP#primera-ejecuci%C3%B3n)
 
-* [Integración Cortex con TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#integraci%C3%B3n-cortex-con-thehive)
+* [Integración Cortex con TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP#integraci%C3%B3n-cortex-con-thehive)
 
-* [Integración MISP con TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#integraci%C3%B3n-misp-con-thehive)
+* [Integración MISP con TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP#integraci%C3%B3n-misp-con-thehive)
 
-* [Webhooks en TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP/edit/main/README.md#webhooks-en-thehive)
+* [Webhooks en TheHive](https://github.com/antonperezv/TheHive-Cortex-MISP#webhooks-en-thehive)
 
 
 ## Introducción
