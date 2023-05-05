@@ -111,6 +111,26 @@ Dentro de cada uno podremos indicar los distintos parámetros para configurarlo 
 
 
 ### MISP
+En MISP, la primera vez que se abra, nos pedirá realizar una configuración inicial.
+![image](https://user-images.githubusercontent.com/45532292/236410877-97a4d8d4-7c50-4260-9e80-799e822098d1.png)
+
+Para ello, tendremos que indicar las credenciales que se encuentran por defecto que son las siguientes:
+- Email: ```admin@admin.test```
+- password: ```admin```
+
+Tras indicar las credenciales anteriores, se nos pedirá cambiar la contraseña anterior. Esta nueva contraseña deberá de ser de como mínimo 12 caracteres y contener una serie de símbolos especiales:
+![image](https://user-images.githubusercontent.com/45532292/236411414-77b315aa-bb22-463c-af11-578c8c895b00.png)
+
+Una vez actualizada la contraseña, se nos mostrará una ventana con un resumen de nuestro usuario actual y tendremos acceso a las funciones propias de la plataforma:
+![image](https://user-images.githubusercontent.com/45532292/236411985-6ec30413-8875-47c4-b34a-9fa6eb23d8fc.png)
+
+Podremos crear una nueva organización, clicando en la sección ```Add Organisations``` al desplegar la pestaña de ```Administration``` situada en la parte superior:
+![image](https://user-images.githubusercontent.com/45532292/236412393-6fd9d462-4e31-4fe0-b4fc-15044936c119.png)
+
+Y podremos añadir un nuevo usuario a dicha organización que se ha creado desde la sección de ```Add User``` al desplegar la pestaña de ```Administration```.
+![image](https://user-images.githubusercontent.com/45532292/236412615-3c26fd8d-6c28-4cf2-88ca-a786c57d72a7.png)
+
+Dentro de esta sección podremos indicar los distintos datos del usuarios que se quiere añadir, como a la organización a la que se quiere añadir o los permnisos que tiene.
 
 ## Integración Cortex con TheHive
 
