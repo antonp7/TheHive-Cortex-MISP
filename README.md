@@ -140,29 +140,37 @@ Dentro de esta sección podremos indicar los distintos datos del usuarios que se
 
 ## Integración Cortex con TheHive
 Para la integración de Cortex con TheHive, es necesario la realización de una API Key de un usuario en Cortex. Para ello, desde la aplicación de Cortex, usando la cuenta de Admin, se necesitará acceder a la sección de Users y pulsar en el botón de ```Create API Key``` del usuario que se quiere integrar con TheHive
+
 ![image](https://user-images.githubusercontent.com/45532292/236424025-58f205fd-fec7-4dcc-ad7e-0d643e0ec139.png)
 
 Tras crear una nueva API Key de dicho usuario, tendremos tres opciones disponibles para el apartado de API Key: Renovar la API Key(```Renew```), Eliminar dicha API Key (```Revoke```) y Mostrar en pantalla la API Key (```Reveal```):
-![image](https://user-images.githubusercontent.com/45532292/236424259-a87e5ea7-400c-4466-ab1f-78edba6e5ca9.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236424259-a87e5ea7-400c-4466-ab1f-78edba6e5ca9.png"> </p>
 
 Si mostramos la API Key por pantalla nos saldrá de la siguiente forma:
-![image](https://user-images.githubusercontent.com/45532292/236424715-f10eb3c2-37bf-4a7b-b39d-ada99703a640.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236424715-f10eb3c2-37bf-4a7b-b39d-ada99703a640.png"> </p>
 
 Será necesario copiar esa API Key y añadirla en la variable de entorno de ```CORTEX_KEY``` que tenemos definida en el fichero .env de la siguiente manera:
-![image](https://user-images.githubusercontent.com/45532292/236425893-d18dd0f8-a532-499c-805b-266032098a19.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236425893-d18dd0f8-a532-499c-805b-266032098a19.png"> </p>
+
 
 Para integrarlo por completo con TheHive, será necesario construir de nuevo la imagen de TheHive con el comando que se ha utilizado anteriormente:
 ```console
  docker-compose --env-file .env up -d
 ```
 Podremos comprobar que la integración se ha realizado satsfactoriamente clicando en el botón ```About``` situado en el menú donde se encuentra el nombre del usuario:
-![image](https://user-images.githubusercontent.com/45532292/236426553-3d937352-308d-499b-b4c3-a4dca2e76d3a.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236426553-3d937352-308d-499b-b4c3-a4dca2e76d3a.png"> </p>
 
 Nos saltará una pestaña que nos indicará que el módulo de CORTEX está en estado ```OK```:
-![image](https://user-images.githubusercontent.com/45532292/236426846-94b11d6d-b459-4556-9054-f106f334d638.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236426846-94b11d6d-b459-4556-9054-f106f334d638.png"> </p>
 
 También se puede consultar que dicha integración está correctamente configurada mirando los iconos situados en la zona inferior derecha de la página. Si el icono de Cortex está en verde, significa que está integrado de forma correcta:
-![image](https://user-images.githubusercontent.com/45532292/236427053-8593e2a9-2fdc-4690-821b-5ca0fd274084.png)
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236427053-8593e2a9-2fdc-4690-821b-5ca0fd274084.png"> </p>
 
 ## Integración MISP con TheHive
 
