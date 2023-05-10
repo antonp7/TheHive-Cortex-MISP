@@ -17,7 +17,9 @@ Instalación de las plataformas TheHive, Cortex y MISP.
 
 * [Integración MISP con TheHive](#integración-misp-con-thehive)
 
-* [Webhooks en TheHive](#webhooks-en-thehive)
+* [Nginx Proxy Manager](#nginx-proxy-manager)
+
+* 
 
 
 ## Introducción
@@ -329,7 +331,7 @@ La notificación de cada uno de los eventos llegará al Webhook indicado una vez
 
 ## Nginx Proxy Manager
 
-Se trata de un contenedor adicional que se ha incluido en este proyecto y que se puede usar para crear certificados SSL de una forma fácil usando LetsEncrypt para ello.
+Se trata de un contenedor adicional que se ha incluido en este proyecto y que se puede usar para crear certificados SSL de una forma fácil usando LetsEncrypt para ello. Con esto, se podrá usarlo para acceder a las aplicaciones de TheHive, Cortex y MISP usando una conexión segura mediante el protocolo HTTPS.
 
 Para acceder a este contenedor, será necesario entrar a la URL indicada anteriormente ([http://localhost:81](http://localhost:81)). Cuando accedamos por primera vez, nos saltará una ventana para poner unas credenciales:
 ![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/c6e21a4f-e69e-4408-9549-3fcda3f89ab1)
@@ -346,7 +348,7 @@ Una vez puestos esos datos, se nos pedirá cambiar tanto el correo electrónico 
 
 Y se nos actualizarán los datos para que la próxima vez que accedamos a la herramienta, podamos usar esas nuevas credenciales que se han establecido. Tras realizar estos cambios, podremos ver en la pestaña de ```Dashboard```, un resumen de todos los Hosts que tenemos configurados:
 
-![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b40925bf-b46d-4e9f-9b93-da90df8a5591).
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b40925bf-b46d-4e9f-9b93-da90df8a5591)
 
 Podremos configurar un nuevo Proxy Host, clicando en la sección de ```Hosts``` en la barra superior y luego en ```Proxy Hosts```. Para añadir uno nuevo, tendremos que pulsar el botón de ```Add Proxy Host```, y ya podremos indicar el nombre del dominio que le queremos poner a la aplicación y a la URL al que apunta. También se nos da la posibilidad de habilitar opciones adicionales como la posibilidad de bloquear exploits conocidos:
 
