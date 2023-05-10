@@ -96,6 +96,11 @@ Si queremos añadir un usuario a una organización, tan sólo hay que entrar en 
 Cuando se vuelva a loguear con una cuenta de un usuario que ha sido creado, se podrá acceder a las distintas funciones de la aplicación, entre las que se incluye la creación de un nuevo caso, ver las tareas pendientes, consultar las alertas o ver un dashborard de todo lo que está sucendiendo en ese momento, como se puede ver en la siguiente imagen:
 ![image](https://user-images.githubusercontent.com/45532292/236211850-c711fc9d-c0ae-4d09-8f5f-de879441e1ca.png)
 
+Para crear un nuevo caso, sólo será necesario clicar en la sección de ```New Case``` en la barra superior y se mostrará una pantalla donde deberemos cubrir una serie de campos indicando el titulo del caso, la fecha, el TLP, el PAP, la importancia del caso, lags que queremos indicar para clasificar el caso, una descripción o las tareas que se van a asignar:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/bcffa110-aaf1-4805-a836-3bd05095010f)
+
+
 ### Cortex
 
 Para el caso de Cortex, se nos pedirá actualizar la base de datos. 
@@ -317,5 +322,6 @@ Se puede modificar que eventos se quiere notificar en la línea de ```trigger```
 
 La notificación de cada uno de los eventos llegará al Webhook indicado una vez que se active con los comandos anteriores. El formato con el que llega dicha notificación, es un JSON como el de la siguiente imagen:
 
-![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b28f5157-3b15-467c-9388-f7409574f691)
+![formato-Webhook-recibido](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b56ee1e3-64fd-4dc7-8fd9-2ed051d6f892)
+
 
