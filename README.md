@@ -229,7 +229,7 @@ IMPORTANTE: Se necesita apuntar esa Auth Key en algún lado antes de cerrar dich
 
 Una vez, apuntada dicha clave, tendremos que ir al archivo de ```application.conf```, situado dentro de la carpeta de ```thehive``` de este repositorio. Dentro de ese archivo pondremos la clave, en la línea donde se indica ```key=``` dentro de la sección de ```auth```:
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236443652-a37472d9-fd95-41b6-a430-d8d5b9f2c6e2.png"> </p>
+<p align="center"> <img src="https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/1d9292df-c55e-48fc-946f-ddce30404e34"> </p>
 
 Para poder realizar la integración con TheHive, se necesitará parar el contedor de TheHive. Esto se puede hacer con el siguiente comando:
 
@@ -308,10 +308,14 @@ curl -XPUT -u$thehive_user:$thehive_password -H 'Content-type: application/json'
     {
       "delegate": false,
       "trigger": { "name": "AnyEvent"},
-      "notifier": { "name": "nombrewebhook", "endpoint": "local" }
+      "notifier": { "name": "webhook", "endpoint": "namewebhook" }
     }
   ]
 }'
 ```
-Se puede modificar que eventos se quiere notificar en la línea de ```trigger```. Para este caso, se notificará todos los eventos dado que está indicado con la opción de ```AnyEvent```.
+Se puede modificar que eventos se quiere notificar en la línea de ```trigger```. Para este caso, se notificará todos los eventos dado que está indicado con la opción de ```AnyEvent```. 
+
+La notificación de cada uno de los eventos llegará al Webhook indicado una vez que se active con los comandos anteriores. El formato con el que llega dicha notificación, es un JSON como el de la siguiente imagen:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b28f5157-3b15-467c-9388-f7409574f691)
 
