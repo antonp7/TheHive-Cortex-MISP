@@ -290,7 +290,7 @@ Como se puede ver, para cada una de las alertas se ofrece una serie de opciones 
 
 ## Webhooks en TheHive
 
-TheHive tiene una opción para poder notificar de todos los eventos que se produzcan y enviarlos a un enlace de Webhook. Para ello es necesario modificar el archivo de ```application.conf```, situado dentro de la carpeta de ```thehive``` de este repositorio. Para ello, será necesario indicar estas líneas en dicho archivo:
+TheHive tiene una opción para poder notificar de todos los eventos que se produzcan y enviarlos a un enlace de Webhook. Para ello es necesario modificar el archivo de ```application.conf```, situado dentro de la carpeta de ```thehive``` de este repositorio. Para ello, será tendrá que indicar estas líneas en dicho archivo:
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/45532292/236461187-dfaa1320-77e7-4b4b-b5d1-c8ab1ce2a96b.png"> </p>
 
