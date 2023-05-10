@@ -18,8 +18,7 @@ Instalación de las plataformas TheHive, Cortex y MISP.
 * [Integración MISP con TheHive](#integración-misp-con-thehive)
 
 * [Nginx Proxy Manager](#nginx-proxy-manager)
-
-* 
+ 
 
 
 ## Introducción
