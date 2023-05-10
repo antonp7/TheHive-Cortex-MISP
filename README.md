@@ -277,6 +277,11 @@ Y será necesario pubicar el evento, pulsando en la opción de ```Publish Event`
 
 ![image](https://user-images.githubusercontent.com/45532292/236460577-67a7f957-5ee7-4f1b-8754-943ed7f1e4d5.png)
 
+Luego de publicar el evento en MISP, aparecerá en TheHive al pasar el período de tiempo que se le indique en el atributo de ```interval``` del archivo de ```application.conf```. Una vez pasado ese tiempo, el evento llegará a TheHive y se podrá consultar en la pestaña de ```Alerts```:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/6287c505-0149-49db-b680-1cc56a41e7ec)
+
+Como se puede ver, para cada una de las alertas se ofrece una serie de opciones entre las que se encuentra ejecutar un Responder si se clica en la última opción disponible que se encuentra a la derecha de cada una de las alertas.
 
 ## Webhooks en TheHive
 
