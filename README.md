@@ -357,5 +357,9 @@ Para pedir un certificado SSL, pulsaremos sobre la pestaña de ```SSL``` y al de
 
 <p align="center"> <img src="https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/1b0f6d88-45b6-405e-887e-48058ad1738b)"> </p>
 
-Con esta última opción, podremos configurar una serie de parámetros, tales como forzar SSL, que soporte HTTP/2 o usar un DNS Challenge.
+Con esta última opción, podremos configurar una serie de parámetros, tales como forzar SSL, que soporte HTTP/2 o usar un DNS Challenge:
+
+<p align="center"> <img src="https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/975a67c6-263b-45dc-b097-84a77fe3bfbb)"> </p>
+
+
 
