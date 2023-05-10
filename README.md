@@ -47,8 +47,9 @@ La instalación de los contenedores se realizará mediante docker compose, en un
 - ElasticSearch
 - Redis
 - MySQL database
+- Nginx Proxy Manager
 
-Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores.
+Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores. Aparte de estos contenedores, se ha añadido uno adional, el Nginx Proxy Manager, que nos podrá servir para poder crear certificados SSL de una forma muy sencilla y nos permitirá acceder a las herramientas con una conexión segura usando el protocolo HTTPS.
 
 
 
@@ -73,6 +74,7 @@ Para poder acceder a las distintas aplicaciones se tienen que abrir desde el nav
 - TheHive: [http://localhost:9000](http://localhost:9000)
 - Cortex: [http://localhost:9001](http://localhost:9001)
 - MISP: [http://localhost:9500](http://localhost:9500)
+- Nginx Proxy Manager: [http://localhost:81](http://localhost:81)
 
 Los puertos a los que se accede a las plataformas son las indicadas anteriormente dado que así se encuentran definidas en el ```docker-compose.yml```. Si se quisieran cambiar los puertos por los que se acceden, tan sólo habría que cambiarlos en el propio archivo.
 
@@ -324,4 +326,35 @@ La notificación de cada uno de los eventos llegará al Webhook indicado una vez
 
 ![formato-Webhook-recibido](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b56ee1e3-64fd-4dc7-8fd9-2ed051d6f892)
 
+
+## Nginx Proxy Manager
+
+Se trata de un contenedor adicional que se ha incluido en este proyecto y que se puede usar para crear certificados SSL de una forma fácil usando LetsEncrypt para ello.
+
+Para acceder a este contenedor, será necesario entrar a la URL indicada anteriormente ([http://localhost:81](http://localhost:81)). Cuando accedamos por primera vez, nos saltará una ventana para poner unas credenciales:
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/c6e21a4f-e69e-4408-9549-3fcda3f89ab1)
+
+Las credenciales por defecto son las siguientes:
+- Email address: ```admin@example.com```
+- Password: ```changeme```
+
+Una vez puestos esos datos, se nos pedirá cambiar tanto el correo electrónico como la contraseña:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/fbf8e51a-707f-4006-8ee4-2d34d25f9344)
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/814e949e-c96f-4a7b-9bf4-40b37f6e8dbd)
+
+Y se nos actualizarán los datos para que la próxima vez que accedamos a la herramienta, podamos usar esas nuevas credenciales que se han establecido. Tras realizar estos cambios, podremos ver en la pestaña de ```Dashboard```, un resumen de todos los Hosts que tenemos configurados:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/b40925bf-b46d-4e9f-9b93-da90df8a5591).
+
+Podremos configurar un nuevo Proxy Host, clicando en la sección de ```Hosts``` en la barra superior y luego en ```Proxy Hosts```. Para añadir uno nuevo, tendremos que pulsar el botón de ```Add Proxy Host```, y ya podremos indicar el nombre del dominio que le queremos poner a la aplicación y a la URL al que apunta. También se nos da la posibilidad de habilitar opciones adicionales como la posibilidad de bloquear exploits conocidos:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/146b6505-c70a-4169-a2cf-4c5cce1ad7e8)
+
+Para pedir un certificado SSL, pulsaremos sobre la pestaña de ```SSL``` y al desplegar el menú de ```SSL Certificate```, podremos pedir un certificado SSL generado con Let's Encrypt:
+
+![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/1b0f6d88-45b6-405e-887e-48058ad1738b)
+
+Con esta última opción, podremos configurar una serie de parámetros, tales como forzar SSL, que soporte HTTP/2 o usar un DNS Challenge.
 
