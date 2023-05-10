@@ -351,11 +351,11 @@ Y se nos actualizarán los datos para que la próxima vez que accedamos a la her
 
 Podremos configurar un nuevo Proxy Host, clicando en la sección de ```Hosts``` en la barra superior y luego en ```Proxy Hosts```. Para añadir uno nuevo, tendremos que pulsar el botón de ```Add Proxy Host```, y ya podremos indicar el nombre del dominio que le queremos poner a la aplicación y a la URL al que apunta. También se nos da la posibilidad de habilitar opciones adicionales como la posibilidad de bloquear exploits conocidos:
 
-![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/146b6505-c70a-4169-a2cf-4c5cce1ad7e8)
+<p align="center"> <img src="https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/146b6505-c70a-4169-a2cf-4c5cce1ad7e8)"> </p>
 
 Para pedir un certificado SSL, pulsaremos sobre la pestaña de ```SSL``` y al desplegar el menú de ```SSL Certificate```, podremos pedir un certificado SSL generado con Let's Encrypt:
 
-![image](https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/1b0f6d88-45b6-405e-887e-48058ad1738b)
+<p align="center"> <img src="https://github.com/antonperezv/TheHive-Cortex-MISP/assets/45532292/1b0f6d88-45b6-405e-887e-48058ad1738b)"> </p>
 
 Con esta última opción, podremos configurar una serie de parámetros, tales como forzar SSL, que soporte HTTP/2 o usar un DNS Challenge.
 
