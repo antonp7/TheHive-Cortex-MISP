@@ -50,7 +50,7 @@ La instalación de los contenedores se realizará mediante docker compose, en un
 - MySQL database
 - Nginx Proxy Manager
 
-Aparte, de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores. Aparte de estos contenedores, se ha añadido uno adional, el Nginx Proxy Manager, que nos podrá servir para poder crear certificados SSL de una forma muy sencilla y nos permitirá acceder a las herramientas con una conexión segura usando el protocolo HTTPS.
+Aparte de los contenedores propios de las herramientras de TheHive, Cortex y MISP, se instalará la base de datos ElasticSearch, donde se guarde la información almacenada tanto en TheHive como en Cortex (usuarios, organizaciones, casos, observables creados, etc.). Por otro lado, MISP necesita de su propia base de datos de MySQL y de Redis para su funcionamiento, por lo que es también necesario la instalación de dichos contenedores. Aparte de estos contenedores, se ha añadido uno adicional, el Nginx Proxy Manager, que nos podrá servir para poder crear certificados SSL de una forma muy sencilla y nos permitirá acceder a las herramientas con una conexión segura usando el protocolo HTTPS.
 
 
 
